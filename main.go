@@ -20,5 +20,7 @@ func main() {
 
 	e.GET("/admin", h.private, isLoggedIn, isAdmin)
 
+	e.POST("/token", h.token)
+
 	e.Logger.Fatal(e.Start(":1323"))
 }
